@@ -240,7 +240,7 @@ open class InfiniteCarousel: UICollectionView, UICollectionViewDataSource, UICol
         scrollTimer?.invalidate()
     }
 
-    public func scrollToNextPage() {
+    @objc public func scrollToNextPage() {
         var nextItem = self.currentlyFocusedItem + itemsPerPage
         if nextItem >= buffer + count {
             nextItem -= count
